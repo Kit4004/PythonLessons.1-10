@@ -1,0 +1,99 @@
+
+# if,elif and else
+name = input("please tell me your name: ")
+if name == '':
+    name = input('you didn\'t input a name, please try again: ')
+age = int(input('Now tell me your age, ' + name + ': '))
+if age >= 16:
+    print('wow, you\'re legally allowed to drink! Go celebrate with a beer!')
+elif age > 0:
+    print('unlucky little dude, no beer for you.')
+else:
+    
+    age = int(input('it appears that you haven\'t input a number, please try again: '))
+
+print('This is what we got so far: you are ' +str(name)+ ' and you are ' +str(age)+ ' years old!')
+
+
+#For
+
+#get a list
+food = ['apples','eggs','tofu','banana','beef']
+# for takes a list and treats each item individually
+
+# after a for, make any variable (f is an example) to represent-
+# each item each loop (it changes every loop)
+
+for f in food:
+    print(f)
+    print(str(f) + ' has ' +str(len(f))+ ' letters')
+# remember, to change your variables to str, as int /= str
+# remember you can also slice in for loops
+james = ('cool','kinda edgy','lowkey kinda edgy','normal','eating apples')
+
+for j in james[1:5]:
+    print('James is: ' +j)
+
+#Range
+
+# The built-in range function in Python is very useful to generate sequences
+# of numbers in the form of a list. 
+
+# while loop. keeps looping until false
+
+'''The Python for statement iterates over the members of a sequence
+in order, executing the block each time. Contrast the for statement
+with the ''while'' loop, used when a condition needs to be checked
+each iteration, or to repeat a block of code forever'''
+
+nox = 39
+
+while nox < 70:
+    print(nox)
+    nox += 3
+
+print('nice')
+
+# I'm making a 'mysterynumber' game
+
+
+'''mnumber = 68
+#pretend you didn't see that
+
+for n in range(101): #this creates a for loop in the range of 100
+    if n is mnumber:
+        print(n, ' is mysterynumber')
+        break # break is what it says. it breaks out of the loop
+    else:
+        print(n, ' wasn\'t the mysterynumber, unlucky')'''
+
+
+# my attempt on the proper game!!!!!!
+import random
+
+guess = int(input('Guess a number from 1 to 100: '))
+
+mysterynumber = random.randint(1,100)
+
+while guess / mysterynumber:
+    print('Wrong')
+
+    if guess > 100:
+        print('you\'ve broken the rules of the game! Now be Exiled! *dom,dom,doooom*')
+        break
+    
+    if guess < mysterynumber:
+        print('Your guess is low! Aim higher!')
+        guess = int(input('Guess again: '))
+
+        if guess == mysterynumber:
+            print('yes! you\'ve guessed correct!')
+            break
+
+    if guess > mysterynumber:
+        print('Your guess us high! Aim lower!')
+        guess = int(input('Guess again: '))
+        
+        if guess == mysterynumber:
+            print('yes! you\'ve guessed correct!')
+            break
