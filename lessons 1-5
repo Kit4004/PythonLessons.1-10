@@ -1,0 +1,45 @@
+#basic operations
+a = 1 + 1
+print(a)
+# - * + / (% = remainders) (** = power of)
+b = 18 % 4
+print(b)
+
+#variables and data types
+Banana = 4 #this is a variable
+James = 'James likes Bananas' #this is a string (just the green part)
+# in some cases, there are issues with quotation marks in the string.
+# e.g  'James says to his Banana, "you are James' Banana!"'        (because he is mentally unstable)
+# in this case, backslashing (\) will mean whatever follows it will be identified as part of the string
+print('James says to his Banana, "you are James\' Banana!"')
+
+# \n means to enter, leaving the string in two parts. use r before the quotation marks to print as is
+
+firstname = 'Barnes'
+firstname = 'Bucky'
+realname = 'Barnes'
+print(firstname) # it will only print Barnes, as i have updated the variable's info
+# now is i change the variable name, and add it while print(ing), it will change accordingly
+print(firstname + ' ' + realname)
+
+#slicing strings
+user = 'James Jamison'
+#computers start counting at 0, if you want to locate characters in a str, do this:
+print(user[2])
+print(user[0:12])
+#length for strings
+print(len(user))
+
+#Lists
+team = [23,25,42,64,69]
+print(team[4])
+newteam = [130,147,420]
+print(team + newteam)
+team.append(1234)
+print(team)
+#resetting values in lists
+team[:2] = [420,68]
+print(team)
+#or permanently deleting items of the list or the complete list
+team[:2] =[]
+print(team)
